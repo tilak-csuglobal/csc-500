@@ -28,7 +28,7 @@ OUTPUT alarm_minutes
 END
 '''
 
-# Ask the user for the current time (hours)
+# Input the current time (hours)
 current_hours = int(input("Enter the current hour (0-23): "))
 
 # Check if the entered hour is valid
@@ -36,7 +36,7 @@ while current_hours < 0 or current_hours > 23:
     print("Invalid hour. Please enter a value between 0 and 23.")
     current_hours = int(input("Enter the current hour (0-23): "))
 
-# Ask the user for the current time (minutes)
+# Input the current time (minutes)
 current_minutes = int(input("Enter the current minutes (0-59): "))
 
 # Check if the entered minutes are valid
@@ -44,7 +44,7 @@ while current_minutes < 0 or current_minutes > 59:
     print("Invalid minutes. Please enter a value between 0 and 59.")
     current_minutes = int(input("Enter the current minutes (0-59): "))
 
-# Ask the user for the wait time (hours and minutes)
+# Input the wait time (hours and minutes)
 wait_hours = int(input("Enter the number of hours to wait for the alarm: "))
 wait_minutes = int(input("Enter the number of minutes to wait for the alarm: "))
 
