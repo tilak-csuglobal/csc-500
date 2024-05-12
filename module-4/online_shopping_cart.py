@@ -34,33 +34,22 @@ class ItemToPurchase:
 
 # Step 2: Prompt the user for two items and create two objects of the ItemToPurchase class
 
-# Prompt for Item 1
-print("Item 1")
+# Create a list to store the items
+items = []
 
-item1 = ItemToPurchase()
-item1.item_name = input("Enter the item name:\n")
-item1.item_price = float(input("Enter the item price:\n"))
-item1.item_quantity = int(input("Enter the item quantity:\n"))
-
-# Prompt for Item 2
-print("\nItem 2")
-
-item2 = ItemToPurchase()
-item2.item_name = input("Enter the item name:\n")
-item2.item_price = float(input("Enter the item price:\n"))
-item2.item_quantity = int(input("Enter the item quantity:\n"))
-
-# Step 3: Add the costs of the two items together and output the total cost
+# Prompt user for two items
+for i in range(2):
+    print(f"\nItem {i+1}")
+    item = ItemToPurchase()
+    item.item_name = input("Enter the item name:\n")
+    item.item_price = float(input("Enter the item price:\n"))
+    item.item_quantity = int(input("Enter the item quantity:\n"))
+    items.append(item)
 
 # Print total cost
 print("\nTOTAL COST")
-
-# Print cost of Item 1
-item1.print_item_cost()
-
-# Print cost of Item 2
-item2.print_item_cost()
-
-# Calculate total cost
-total_cost = (item1.item_price * item1.item_quantity) + (item2.item_price * item2.item_quantity)
-print(f"Total: ${format_float(total_cost)}")
+total = 0
+for item in items:
+    item.print_item_cost()
+    total += item.item_price * item.item_quantity
+print(f"Total: ${format_float(total)}")
