@@ -14,9 +14,9 @@ FOR year = 1 TO number_of_years
     NEXT month
 NEXT year
 
-PRINT "Number of months: ", years * 12
+PRINT "Number of months: ", number_of_years * 12
 PRINT "Total inches of rainfall:", total_rainfall
-PRINT "Average Rainfall per Month: ", total_rainfall / (years * 12)
+PRINT "Average Rainfall per Month: ", total_rainfall / (number_of_years * 12)
 
 END
 
