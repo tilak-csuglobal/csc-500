@@ -1,4 +1,4 @@
-# Step 0: Leveraging the code for ItemToPurchase class developed during Module 4, with an additional instance variable- item_description
+# Step 0: Leveraging the code for ItemToPurchase class developed during Module 4, with an additional instance attribute- item_description
 
 class ItemToPurchase:
 
