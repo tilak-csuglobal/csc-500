@@ -109,24 +109,30 @@ def print_menu(cart):
         choice = str.lower(input("Choose an option:\n"))
 
         if choice == 'a':
+            # Step 8: Implement Add item to cart menu option.
+
             print("ADD ITEM TO CART")
             name = input("Enter the item name: \n")
             description = input("Enter the item description: \n")
             price = int(input("Enter the item price: \n"))
             quantity = int(input("Enter the item quantity: \n"))
-            item = ItemToPurchase(name, description, price, quantity)
+            item = ItemToPurchase(name, description, price, quantity) #Create a new ItemToPurchase object to be added to the cart
             cart.add_item(item)
 
         elif choice == 'r':
+            # Step 9: Implement remove item menu option.
+
             print("REMOVE ITEM FROM CART")
             name = input("Enter name of item to remove: \n")
             cart.remove_item(name)
 
         elif choice == 'c':
+            # Step 10: Implement Change item quantity menu option.
+
             print("CHANGE ITEM QUANTITY")
             name = input("Enter the item name: \n")
             quantity = int(input("Enter the new quantity: \n"))
-            item = ItemToPurchase(name, item_quantity=quantity)
+            item = ItemToPurchase(name, item_quantity=quantity) #Create a new ItemToPurchase object to be compared against each cart items
             cart.modify_item(item)
 
         elif choice == 'i':
@@ -152,13 +158,6 @@ def main():
     print(f"Today's date: {current_date}")
 
     my_cart = ShoppingCart(customer_name, current_date)
-
-    # item1 = ItemToPurchase("Nike Romaleos 2", "Volt color, Weightlifting shoes", 189, 1)
-    # item2 = ItemToPurchase("Chocolate Chips", "Semi-sweet", 3, 5)
-    # item3 = ItemToPurchase("Powerbeats 2 Headphones", "Bluetooth headphones", 128, 1)
-    # my_cart.add_item(item1)
-    # my_cart.add_item(item2)
-    # my_cart.add_item(item3)
 
     print_menu(my_cart)
 
